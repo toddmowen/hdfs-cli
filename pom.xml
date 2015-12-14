@@ -3,12 +3,18 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.instanceone.hdfs</groupId>
 	<artifactId>hdfs-cli</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-cdh5.3.8</version>
 	<name>Hadoop HDFS CLI</name>
 	<description>Hadoop HDFS Command Line Interface</description>
 	<properties>
-		<hadoop.version>0.20.205.0</hadoop.version>
+		<hadoop.version>2.5.0-mr1-cdh5.3.8</hadoop.version>
 	</properties>
+        <repositories>
+          <repository>
+            <id>Hadoop Releases</id>
+            <url>https://repository.cloudera.com/content/repositories/releases/</url>
+          </repository>
+        </repositories>
 	<dependencies>
 		<dependency>
 			<groupId>com.github.ptgoetz</groupId>
@@ -17,7 +23,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.hadoop</groupId>
-			<artifactId>hadoop-core</artifactId>
+			<artifactId>hadoop-client</artifactId>
 			<version>${hadoop.version}</version>
 		</dependency>
 	</dependencies>
